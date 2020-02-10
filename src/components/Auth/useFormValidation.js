@@ -31,10 +31,10 @@ function useFormValidation(initialState, validate, authenticate) {
 
   function handleSubmit(event) {
     event.preventDefault();
+    console.log(`Validate on submit = ${values}`);
     const validationErrors = validate(values);
     setErrors(validationErrors);
     setSubmitting(true);
-    console.log({ values });
   }
   return {
     handleChange,
